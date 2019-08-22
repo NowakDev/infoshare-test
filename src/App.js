@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FetchUsers from './Components/FetchUsers'
+import FetchUsers from './components/FetchUsers'
 
 const App = props => {
   return (
