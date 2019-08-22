@@ -14,7 +14,7 @@ class FetchUsers extends React.Component {
           users: data.results
         })
       })
-      .catch(() => alert('Error!'))
+      .catch(() => console.log('Error!'))
   }
 
   render() {
