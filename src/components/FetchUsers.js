@@ -8,12 +8,13 @@ class FetchUsers extends React.Component {
   componentDidMount() {
     const url = 'https://randomuser.me/api?results=10'
     fetch(url)
-      .then(r => r.json())
+      .then(r => r.status !== 200 ? Promise.reject() : r.json())
       .then(data => {
         this.setState({
           users: data.results
         })
       })
+      .catch(() => alert('Error!'))
   }
 
   render() {
